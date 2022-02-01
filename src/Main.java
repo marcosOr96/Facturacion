@@ -15,12 +15,10 @@ public class Main {
 
         System.out.println(f1.toString());
 
-        for (int i = 1; i < f1.getProductos().length; i++) {
-            p1.setCodigo(sc.leerCadena("Codigo:"));
-            p1.setPrecio(sc.leerEntero("Precio"));
-            f1.modificar(p,p1);
-            break;
-        }
+        p1.setCodigo(sc.leerCadena("Codigo:"));
+        p1.setPrecio(sc.leerEntero("Precio"));
+        f1.modificar(2,p1);
+
         System.out.println(f1.toString());
     }
 }

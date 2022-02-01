@@ -7,7 +7,6 @@ public class Factura {
 
     public Factura(int cantProductos) {
         productos = new Producto[cantProductos];
-        this.numero = numero;
     }
 
     public void setNumero(int numero) {
@@ -29,28 +28,12 @@ public class Factura {
         }
     }
 
-    public void modificar(Producto p, Producto p1) {
-        for (int i = 1; i < productos.length; i++) {
-            if (productos[i] == null) {
-                productos[i] = new Producto();
-                productos[1].setCodigo(p.getCodigo());
-                productos[1].setPrecio(p.getPrecio());
-                break;
+    public void modificar(int posicion, Producto p1) {
+
+            if (productos[posicion]!=null) {
+                productos[posicion].setCodigo((p1.getCodigo()));
+                productos[posicion].setPrecio((p1.getPrecio()));
             }
-        }
-        String num1 = p1.getCodigo();
-        int num2 = p1.getPrecio();
-        boolean modificado = false;
-        for (int i = 1; i < productos.length; i++) {
-            productos[1].setCodigo(p.getCodigo());
-            productos[1].setPrecio(p.getPrecio());
-            if (productos[i].getCodigo() != num1 && productos[1].getPrecio() != num2) {
-                productos[1].setCodigo((num1));
-                productos[1].setPrecio((num2));
-                modificado = true;
-                break;
-            }
-        }
     }
 
     public String toString() {
