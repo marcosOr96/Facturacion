@@ -4,16 +4,10 @@ public class Factura {
     private int numero;
     private Producto productos[];
 
-    public Factura() {
-    }
 
     public Factura(int cantProductos) {
         productos = new Producto[cantProductos];
         this.numero = numero;
-    }
-
-    public int getNumero() {
-        return numero;
     }
 
     public void setNumero(int numero) {
@@ -22,10 +16,6 @@ public class Factura {
 
     public Producto[] getProductos() {
         return productos;
-    }
-
-    public void setProductos(Producto[] productos) {
-        this.productos = productos;
     }
 
     public void ingresarDatos(Producto p) {

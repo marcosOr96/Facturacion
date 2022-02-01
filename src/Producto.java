@@ -5,11 +5,6 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(String codigo, int precio) {
-        this.codigo = codigo;
-        this.precio = precio;
-    }
-
     public String getCodigo() {
         return codigo;
     }
